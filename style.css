@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary-color: #143d59;
+    --bg-color: #f4b41a;
+    --text-font: Poppins;
+    --round: 5px;
+}
+
+body {
+    min-height: 100vh;
+    /* background-color: cadetblue; */
+}
+
+.btn {
+    /* min-width: 20%; -- why is this not working? */
+    padding: .8em 2em;
+    font-size: 1.25em;
+    font-weight: bold;
+    background: #000;
+    border-radius: var(--round);
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+}
+
+.main-container {
+    max-width: 50vw;
+    min-height: 75vh; /* temp */
+    margin: 2em auto;
+    padding: 0 2em;
+    background-color: var(--bg-color);
+    border-radius: var(--round);
+}
+
+.main-container .title {
+    padding-top: .8em;
+    color: var(--primary-color);
+    font-size: 2em;
+    font-family: var(--text-font);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main-container #todoInput {
+    margin-top: 1em;
+    padding: .8em;
+    border: transparent;
+    font-size: 1.25em;
+    min-width: 80%;
+    border-radius: var(--round);
+    outline: transparent;
+}
+
+.main-container #todoInput:focus {
+    box-shadow: 0px 0px 0px 1px #1c577e;
+}
+
+.main-container .container {
+    text-align: center;
+}
+
+.addBtn {
+    padding: .8em 1em;
+    transition: .3s linear;
+}
+.addBtn:hover {
+    background-color: #182c3a;
+    color: #f5b00e;
+}
