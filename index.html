@@ -18,9 +18,19 @@
     <div class="main-container">
         <h2 class="title">Todo App</h2>
         <div class="container">
-            <input type="text" id="todoInput" placeholder="Enter new task...">
-            <a href="#" class="btn addBtn"><i class="fas fa-plus"></i></a>
-            <table>
+            <div class="input-group">
+                <input type="text" id="todoInput" placeholder="Enter new task...">
+                <a href="#" class="btn addBtn"><i class="fas fa-plus"></i></a>
+            </div>
+            <table class="taskLister">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Task</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
                 <tbody id="tasks"></tbody>
             </table>
         </div>

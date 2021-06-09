@@ -15,7 +15,9 @@
 
 body {
     min-height: 100vh;
-    /* background-color: cadetblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn {
@@ -23,16 +25,14 @@ body {
     padding: .8em 2em;
     font-size: 1.25em;
     font-weight: bold;
-    background: #000;
     border-radius: var(--round);
     color: var(--bg-color);
     background-color: var(--primary-color);
 }
 
 .main-container {
-    max-width: 50vw;
-    min-height: 75vh; /* temp */
-    margin: 2em auto;
+    min-width: 50vw;
+    min-height: 75vh;
     padding: 0 2em;
     background-color: var(--bg-color);
     border-radius: var(--round);
@@ -72,4 +72,41 @@ body {
 .addBtn:hover {
     background-color: #182c3a;
     color: #f5b00e;
+}
+
+.taskLister {
+    margin-top: 2em;
+    border-collapse: collapse;
+    background-color: #fff;
+    min-width: 100%;
+    font-size: 1.15em;
+}
+
+.taskLister th {
+    background-color: #182c3a;
+    color: var(--bg-color);
+}
+
+.taskLister th , .taskLister td{
+    padding: .8em 1em;
+}
+
+.taskLister #tasks tr:nth-child(even) {
+    background-color: #e7e7e7;
+}
+
+/* standalone styles */
+#editBtn , #deleteBtn{
+    background-color: transparent;
+    font-size: 1.15em;
+    padding: .6em .8em;
+}
+.statusIcon {
+    font-weight: bold;
+    color: rgb(48, 158, 81);
+}
+
+td.task {
+    opacity: .6;
+    text-decoration: line-through;
 }
