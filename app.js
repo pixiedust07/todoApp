@@ -1,12 +1,40 @@
 const taskBtn = document.querySelector('.addBtn');
+const todoInput = document.querySelector('#todoInput')
+todoInput.addEventListener('keypress', event => {
+    if(event.keyCode === 13) {
+        if(event.target.value == '') {
+            alert('Input should not be empty')
+        } else if(hasNumber(event.target.value)) {
+            alert('Input should not contain any numbers')
+        } 
+        else {
+            UI.addTask(event.target.value)
+        }
+    }
+})
 taskBtn.addEventListener('click', event => {
-    UI.addTask(event.currentTarget.previousElementSibling.value);
+    const userInput = event.currentTarget.previousElementSibling.value;
+
+    const validatedInput = hasNumber(userInput)
+
+    if(!validatedInput && userInput != '') {
+        UI.addTask(userInput)
+    } else if(userInput == ''){
+        alert('input should not be empty')
+    } else if (validatedInput) {
+        alert('input should not contain any numbers')
+    }
 });
+// function to check whether input contains number
+function hasNumber(val) {
+    return /\d/.test(val);
+}
+
 
 class UI {
     // dummy data; for now.
     static displayTasks() {
-        const tasks = ['Take out trash', 'Do laundry', 'Visit part'];
+        const tasks = ['Take out trash', 'Do laundry', 'Visit park'];
 
         tasks.forEach(task => UI.addTask(task));
     }
