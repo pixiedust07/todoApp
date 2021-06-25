@@ -96,10 +96,11 @@ body {
 }
 
 /* standalone styles */
-#editBtn , #deleteBtn{
+#editBtn , #deleteBtn, #saveBtn{
     background-color: transparent;
     font-size: 1.15em;
     padding: .6em .8em;
+    cursor: pointer;
 }
 .statusIcon {
     font-weight: bold;
